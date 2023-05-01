@@ -1,0 +1,16 @@
+.fondo{
+    -fx-background-color:#CFCECF;
+
+}
+.menu{
+    -fx-font-size:25;
+
+}
+.opcoes{
+    -fx-font-size:18;
+    -fx-font-style:italic;
+
+}
+.palavras{
+    -fx-font-size:14;
+}

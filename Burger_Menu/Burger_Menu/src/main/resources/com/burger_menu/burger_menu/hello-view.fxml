@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="677.0" prefWidth="886.0" spacing="20.0" styleClass="fondo" stylesheets="@../../../css/estilos.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.burger_menu.burger_menu.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane prefHeight="652.0" prefWidth="846.0" style="-fx-border-color: yellow;" styleClass="fondo" stylesheets="@../../../css/estilos.css">
+      <children>
+         <Separator layoutX="30.0" layoutY="33.0" prefHeight="3.0" prefWidth="716.0" />
+         <Label layoutX="274.0" layoutY="-12.0" styleClass="menu" stylesheets="@../../../css/estilos.css" text="Menú Básico (8euros):" />
+         <Label layoutX="35.0" layoutY="43.0" styleClass="opcoes" stylesheets="@../../../css/estilos.css" text="Hamburguesa" textFill="#e52eab" />
+         <ImageView fitHeight="404.0" fitWidth="591.0" layoutX="200.0" layoutY="149.0" opacity="0.28" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../imagem/burg.png" />
+            </image>
+         </ImageView>
+         <Label layoutX="328.0" layoutY="43.0" styleClass="opcoes" stylesheets="@../../../css/estilos.css" text="Pan" textFill="#e52eab" />
+         <Label layoutX="624.0" layoutY="43.0" styleClass="opcoes" stylesheets="@../../../css/estilos.css" text="Patatas" textFill="#e52eab" />
+         <RadioButton fx:id="radioButtonPollo" layoutX="40.0" layoutY="70.0" mnemonicParsing="false" styleClass="palavras" stylesheets="@../../../css/estilos.css" text="Pollo">
+            <toggleGroup>
+               <ToggleGroup fx:id="hamburguesa" />
+            </toggleGroup></RadioButton>
+         <RadioButton fx:id="radioButtonCerdo" layoutX="38.0" layoutY="96.0" mnemonicParsing="false" styleClass="palavras" text="Cerdo" toggleGroup="$hamburguesa" />
+         <RadioButton fx:id="radioButtonTernera" layoutX="39.0" layoutY="119.0" mnemonicParsing="false" styleClass="palavras" text="Ternera (+1€)" toggleGroup="$hamburguesa" />
+         <RadioButton fx:id="radioButtonVegana" layoutX="39.0" layoutY="146.0" mnemonicParsing="false" styleClass="palavras" text="Vegana (+1€)" toggleGroup="$hamburguesa" />
+         <Separator layoutX="25.0" layoutY="176.0" prefHeight="3.0" prefWidth="716.0" />
+         <RadioButton fx:id="radioButtonNormal" layoutX="295.0" layoutY="70.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="86.0" styleClass="palavras" text="Normal">
+            <toggleGroup>
+               <ToggleGroup fx:id="pan" />
+            </toggleGroup></RadioButton>
+         <RadioButton fx:id="radioButtonIntegral" layoutX="295.0" layoutY="96.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="86.0" styleClass="palavras" text="Integral" toggleGroup="$pan" />
+         <RadioButton fx:id="radioButtonCenteno" layoutX="295.0" layoutY="120.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="86.0" styleClass="palavras" text="Centeno" toggleGroup="$pan" />
+         <RadioButton fx:id="radioButtonFritas" layoutX="599.0" layoutY="70.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="86.0" styleClass="palavras" text="Fritas">
+            <toggleGroup>
+               <ToggleGroup fx:id="patatas" />
+            </toggleGroup></RadioButton>
+         <RadioButton fx:id="radioButtonGajo" layoutX="598.0" layoutY="96.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="86.0" styleClass="palavras" text="Gajo" toggleGroup="$patatas" />
+         <RadioButton fx:id="radioButtonCaseras" layoutX="600.0" layoutY="120.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="126.0" styleClass="palavras" text="Caseras ( +1€)" toggleGroup="$patatas" />
+         <Label layoutX="38.0" layoutY="195.0" styleClass="opcoes" stylesheets="@../../../css/estilos.css" text="Bebida" textFill="#e52eab" />
+         <RadioButton fx:id="radioButtonCola" layoutX="32.0" layoutY="222.0" mnemonicParsing="false" styleClass="palavras" text="Cola">
+            <toggleGroup>
+               <ToggleGroup fx:id="bebida" />
+            </toggleGroup></RadioButton>
+         <RadioButton fx:id="radioButtonNaranja" layoutX="168.0" layoutY="222.0" mnemonicParsing="false" styleClass="palavras" text="Naranja" toggleGroup="$bebida" />
+         <RadioButton fx:id="radioButtonLimon" layoutX="281.0" layoutY="222.0" mnemonicParsing="false" styleClass="palavras" text="Limon" toggleGroup="$bebida" />
+         <RadioButton fx:id="radioButtonAgua" layoutX="424.0" layoutY="222.0" mnemonicParsing="false" styleClass="palavras" text="Agua" toggleGroup="$bebida" />
+         <RadioButton fx:id="radioButtonCerveza" layoutX="581.0" layoutY="222.0" mnemonicParsing="false" styleClass="palavras" text="Cerveza" toggleGroup="$bebida" />
+         <Separator layoutX="30.0" layoutY="265.0" prefHeight="3.0" prefWidth="716.0" />
+         <Label layoutX="33.0" layoutY="289.0" styleClass="opcoes" stylesheets="@../../../css/estilos.css" text="Opciones extras/adicionale" textFill="#e52eab" />
+         <Label layoutX="549.0" layoutY="280.0" styleClass="opcoes" text="Salsas (+0,5€)" textFill="#e52eab" />
+         <CheckBox fx:id="checkHamburguesa" layoutX="34.0" layoutY="313.0" mnemonicParsing="false" styleClass="palavras" text="Hamburguesa doble (+2€)" />
+         <CheckBox fx:id="checkQueso" layoutX="35.0" layoutY="340.0" mnemonicParsing="false" styleClass="palavras" text="Extra de queso (+0,5€)" />
+         <CheckBox fx:id="checkPatatas" layoutX="34.0" layoutY="376.0" mnemonicParsing="false" styleClass="palavras" text="Extra de patatas (+0,5€)" />
+         <Separator layoutX="30.0" layoutY="417.0" prefHeight="3.0" prefWidth="716.0" />
+         <RadioButton fx:id="radioButtonDomicilio" layoutX="40.0" layoutY="438.0" mnemonicParsing="false" styleClass="palavras" stylesheets="@../../../css/estilos.css" text="Reparto a domicilio">
+            <toggleGroup>
+               <ToggleGroup fx:id="recorrida" />
+            </toggleGroup></RadioButton>
+         <RadioButton fx:id="radioButtonRecogida" layoutX="421.0" layoutY="438.0" mnemonicParsing="false" styleClass="palavras" stylesheets="@../../../css/estilos.css" text="Recogida en local 20%descuento" toggleGroup="$recorrida" />
+         <Separator layoutX="30.0" layoutY="471.0" prefHeight="3.0" prefWidth="716.0" />
+         <Button fx:id="btnCalcular" layoutX="319.0" layoutY="482.0" mnemonicParsing="false" onAction="#Calcular" text="Calcular" />
+         <Label layoutX="71.0" layoutY="522.0" styleClass="opcoes" stylesheets="@../../../css/estilos.css" text="Precio" textFill="#e52eab" />
+         <Label layoutX="332.0" layoutY="522.0" styleClass="opcoes" stylesheets="@../../../css/estilos.css" text="IVA" textFill="#e52eab" />
+         <Label layoutX="572.0" layoutY="522.0" styleClass="opcoes" stylesheets="@../../../css/estilos.css" text="P.V.P" textFill="#e52eab" />
+         <ChoiceBox fx:id="choiceKetchup" layoutX="629.0" layoutY="300.0" prefHeight="26.0" prefWidth="33.0" />
+         <ChoiceBox fx:id="choiceMostarda" layoutX="629.0" layoutY="335.0" prefHeight="26.0" prefWidth="33.0" />
+         <ChoiceBox fx:id="choiceBarbacoa" layoutX="629.0" layoutY="371.0" prefHeight="26.0" prefWidth="33.0" />
+         <Label layoutX="535.0" layoutY="304.0" styleClass="palavras" text="Ketchup" />
+         <Label layoutX="536.0" layoutY="339.0" styleClass="palavras" text="Mostarda" />
+         <Label layoutX="536.0" layoutY="375.0" styleClass="palavras" text="Barbacoa" />
+         <TextArea fx:id="txtPrecio" layoutX="48.0" layoutY="546.0" prefHeight="39.0" prefWidth="86.0" styleClass="caixas" />
+         <TextArea fx:id="txtIVA" layoutX="307.0" layoutY="546.0" prefHeight="39.0" prefWidth="86.0" styleClass="caixas" />
+         <TextArea fx:id="txtPVP" layoutX="555.0" layoutY="546.0" prefHeight="39.0" prefWidth="86.0" styleClass="caixas" />
+      </children>
+   </AnchorPane>
+
+    <Label fx:id="welcomeText" />
+</VBox>
